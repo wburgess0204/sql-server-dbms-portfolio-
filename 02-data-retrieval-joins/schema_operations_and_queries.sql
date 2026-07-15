@@ -11,8 +11,8 @@
 -- ====================================================================
 -- PROMPT 1: Create the Schema/Database
 -- ====================================================================
-CREATE DATABASE IF NOT EXISTS photo_journal_db;
-USE photo_journal_db;
+CREATE DATABASE IF NOT EXISTS finalproject;
+USE finalproject;
 
 
 -- ====================================================================
@@ -153,15 +153,19 @@ SELECT name FROM users;
 -- PROMPT 11: Who's Taking Pictures?
 -- ====================================================================
 -- Relational join to map users to their photograph logs
-SELECT name 
-FROM users, photograph 
-WHERE users.userid = photograph.userid;
+-- Updated to explicit INNER JOIN syntax to improve readability 
+-- and follow modern SQL best practices (avoiding implicit comma joins)
+SELECT users.name 
+FROM users
+INNER JOIN photograph ON users.userid = photograph.userid;
 
 
 -- ====================================================================
 -- PROMPT 12: Unique Names
 -- ====================================================================
 -- Utilizing DISTINCT to remove duplicate rows in user search outputs
-SELECT DISTINCT name
-FROM users, photograph
-WHERE users.userid = photograph.userid;
+-- Updated to explicit INNER JOIN syntax to improve readability 
+-- and follow modern SQL best practices (avoiding implicit comma joins).
+SELECT DISTINCT users.name 
+FROM users
+INNER JOIN photograph ON users.userid = photograph.userid;
