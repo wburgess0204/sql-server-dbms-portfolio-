@@ -114,9 +114,3 @@ INSERT INTO Orders (order_id, customer_id, product_id, quantity, order_amount, o
 -- Delete Action
 DELETE FROM Orders
 WHERE order_id = 1;
-
-/*
-WORKS CITED (FROM ORIGINAL ASSIGNMENT):
-- “Feedback on my final work?” prompt. ChatGPT, 16 Aug. version, OpenAI, 16 August 2025, chat.openai.com/chat.
-- “What errors do I have in this ERD diagram?” prompt. ChatGPT, 5 Aug. version, OpenAI, 5 August 2025, chat.openai.com/chat.
-*/
