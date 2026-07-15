@@ -94,10 +94,3 @@ CREATE TABLE departments (
 ALTER TABLE Employee
 ADD CONSTRAINT fk_addition
 FOREIGN KEY (department_id) REFERENCES departments(department_id);
-
-/*
-WORKS CITED (FROM ORIGINAL ASSIGNMENT):
-- Elmasri, Ramez, and Shamkant B. Navathe. Fundamentals of Database Systems. 7th ed., Pearson, 2016.
-- Gibbs, Martin. "Third Normal Form in DBMS with Examples." Study.com, 8 April 2024.
-- Odugbesan, Temitayo. "What is Normal Form in DBMS? - Types & Examples." Study.com, 3 January 2025.
-*/
