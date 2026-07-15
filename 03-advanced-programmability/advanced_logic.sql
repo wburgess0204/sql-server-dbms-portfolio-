@@ -22,9 +22,11 @@ ORDER BY total_sales;
 
 -- 2. String Concatenation
 -- This query concatenates the product name, supplier name, and phone into a single string 
+-- Updated to explicit INNER JOIN syntax to improve readability 
+-- and follow modern SQL best practices (avoiding implicit joins).
 SELECT product_name + ' (' + supplier_name + ', ' + phone + ') ' AS product_data
 FROM Products
-JOIN Suppliers ON Products.supplier_id = Suppliers.supplier_id;
+INNER JOIN Suppliers ON Products.supplier_id = Suppliers.supplier_id;
 
 -- 3. Temporal Grouping Analysis
 -- This query uses date/time functions to group the total_orders from the Orders table in descending order
